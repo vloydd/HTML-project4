@@ -4,15 +4,157 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project3</title>
+    <title>Project4</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
 </head>
 <body>
-    <div class="wrapper">
+    <div id="wrapper">
+        <!--HEADER-->
+        <header class="header">
+            <div class="head">
+                <div class="headsection">
+                    <div class="headin1220">
+                        <div class="headcont">
+                            <img class="logo" src="img/logo_Oxit.png" title="logo" alt="logoimg">
+                                    <ul class="menu">
+                                        <li><a href="#" class="menu__item">Головна</a></li>
+                                        <li><a href="#" class="menu__item">Програма курсу</a></li>
+                                        <li><a href="#" class="menu__item">Відгуки про курс</a></li>
+                                        <li><a href="#" class="menu__item">Відео</a></li>
+                                        <li><a href="#" class="menu__item">Ментори</a></li>
+                                        <li><a href="#feedback" class="menu__item">Подати заявку</a></li>
+                                    </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </header>
+
+            <div class="main">
+                <content class="content">
+                    <div class="content__wrapper">
+                        <div class="forminfo">
+                            <div class="info">
+                                <h3 class="info__title">Курси програмування у Луцьку</h3>
+                                <p class="info__text">
+                                    Сфера IT розвивається максимально швидко. 
+                                    Зараз дуже популярно здобувати освіту, що повʼязана з IT. 
+                                    Існує лише одна проблема - брак дійсно кваліфікованих спеціалістів в Україні. 
+                                    Під час навчання в університеті ми отримуємо мало практики і"живих", реальнох кейсів. 
+                                    IT школа OxIT створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання. 
+                                    щоб стати IT спеціалістом. Чекаємо вас на нших курсах з програмування в Луцьку. 
+                                    Старт наступного курсу з 3 вересня. </p>
+                            </div>
+                            <div class="forms">
+                                <div id="feedback">
+                                    <div class="popup-body">
+                                        <div class="popup-content">
+                                            <div class="popup-main">
+                                                <div class="popup-title">
+                                                    <p class="form__title">Зареєструватися на курси</p>
+                                                </div>
+                                                <form id="form" class="myform" action="#" method="get">
+                                                    <div class="form__item">
+                                                        <label class="form__label">Імʼя*</label>
+                                                        <input type="text" id="name" name="name" class="form__input _req" onfocus="this.value=''" placeholder="Імʼя">
+                                                    </div>
+                                                    <div class="form__item">
+                                                        <label class="form__label">Прізвище*</label>
+                                                        <input type="text" id="surname" name="surname" class="form__input _req" onfocus="this.value=''" placeholder="Прізвище">
+                                                    </div>
+                                                    <div class="form__item">
+                                                        <label class="form__label">Мене більше цікавить*</label>
+                                                        <input type="text" id="speciality" name="specs" class="form__input _req _spec" onfocus="this.value= ''" placeholder="developer or QA">
+                                                    </div>
+                                                    <div class="form__item">
+                                                        <label class="form__label">Телефон*</label>
+                                                        <input type="phone" id="phone" name="phone" class="form__input _req  _tel" onfocus="this.value=''" placeholder="Номер телефону: +38 XXX XX XX XXX">
+                                                    </div>
+                                                    <div class="form__item">
+                                                        <label class="form__label">Email*</label>
+                                                        <input type="text" id="email" name="email" class="form__input _req _email" onfocus="this.value=''" placeholder="Email">
+                                                    </div>
+                                                    <!--<div class="form__item">
+                                                        <label class="form__label">Сообщение</label>
+                                                        <textarea name="message" id="message" class="form__input"></textarea>
+                                                    </div>-->
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" id="agreee" class="form__checkbox _check _req">
+                                                        <label for="agree" class="form__label"><span>Я погоджуюся із <a href="#">Політикою Конфіденційності</a></span></label>
+                                                    </div>
+                                                        <div id="error"></div>
+                                                    
+                                                    <input class="form__submit" type="submit" name="submit" value="Зареєструватися зараз">
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </content>
+            
+            </div>
+
+                    <!--FOOTER-->
+        <footer class="footer">
+            <div class="footsection">
+                <div class="footin980">
+                    <div class="contacts">
+                        <div class="contacts__container">
+                            <ul class="contacts__list">
+                                <li><a href="#">
+                                    <div class="contacts__item">
+                                        <img class="contacts__item_photo" src="img/icons/footer/phone.png" title="phonelogo" alt="phoneimg">
+                                        <p>Телефон</p>
+                                        <a href="#">+38 067 332 17 55</a>
+                                    </div>
+                                </li>
+                                <li><a href="#">
+                                    <div class="contacts__item">
+                                        <img class="contacts__item_photo" src="img/icons/footer/email.png" title="emaillogo" alt="emailimg">
+                                        <p>E-mail</p>
+                                        <a href="#">office@it.volyn.ua</a>
+                                    </div>
+                                </li>
+                                <li><a href="#">
+                                    <div class="contacts__item">
+                                        <img class="contacts__item_photo" src="img/icons/footer/location.png" title="loclogo" alt="locationimg">
+                                        <p>Адреса</p>
+                                        <a href="#">вул. Боженка 34г, м.Луцьк</a>
+                                    </div>
+                                </li>
+                                <li><a href="#">
+                                    <div class="contacts__item">
+                                        <img class="contacts__item_photo" src="img/icons/footer/facebook.png" title="facelogo" alt="facebookimg">
+                                        <p>Facebook</p>
+                                        <a href="#">facebook.com/oxitschool</a>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="copyrights">
+                        <div class="copyrights__container">
+                            <div class="copyrights__item">
+                                <a href="#" class="copyrights__link">&copy Copyright 2018-2020 Internet Devels</a>
+                                <a href="#" class="copyrights__terms">Умови політики конфіденційності</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
