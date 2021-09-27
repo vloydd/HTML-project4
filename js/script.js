@@ -108,3 +108,156 @@ function telTest(input) {
     const res = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
     return !res.test(input.value);
 }
+
+
+const slider= document.querySelector('.siteb-slider');
+/*let mySwiper;
+
+function mobile() {
+    if (window.innerWidth < 850) {
+        mySwiper =  new Swiper(slider,  {
+            slidersPerView: 2,
+            spaceBetween: 50,
+            loop: true,
+            slideClass: 'siteb-slider__slide',
+        });  
+    }
+    if (window.innerWidth >= 850) {
+        mySwiper.destroy();
+    }
+}
+mobile();
+window.addEventListener('resize', () => {
+    mobile();   
+});*/
+
+let mySwiper;
+
+function mobileSlider() {
+	if (window.innerWidth <= 800 && slider.dataset.mobile == 'false') {
+		mySwiper = new Swiper(slider, {
+			slidesPerView: 2,
+			spaceBetween: 20,
+			loop: true,
+			slideClass: 'siteb-slider__slide',
+			// pagination: {
+			// 	el: '.swiper-pagination',
+			// 	clickable: true,
+			// },
+		});
+
+		slider.dataset.mobile = 'true';
+	}
+
+	if (window.innerWidth > 800) {
+		slider.dataset.mobile = 'false';
+		if (slider.classList.contains('swiper-container-initialized')) {
+			mySwiper.destroy();
+		}
+	}
+}
+
+mobileSlider()
+
+window.addEventListener('resize', () => {
+	mobileSlider();
+});
+
+/*new Swiper('.siteb-slider', {
+    //loop: true,
+    slidesPerView: 1,
+
+    
+    /*scrollbar: {
+        el: '.swiper-scrollbar',
+        dragable: true
+    },
+    */
+    //touchRatio: 0,    
+    
+   // slideToClickedSlide: true,
+    /*keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+    *///autoheight: true,
+    // slidesPerView: 3,
+    
+    //watchOverflow: true,
+        //effect: 'slide',
+    //spaceBetween: 50,
+    //initialSlide: 0,
+    //init: false,    
+    //width: 1220,
+    /*breakpoints: {
+        851: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            init: false,
+            grabCursor: false,
+            touchRatio: 0, 
+            loop: false,  
+        },
+        601: {
+            loop: false,
+            slidesPerView: 2,
+            grabCursor: true,
+            spaceBetween: 10,
+            touchRatio: 2,
+
+        },
+        0: {
+            loop: false,
+            slidesPerView: 1,
+            grabCursor: true,
+            touchRatio: 3,
+        }
+    },
+
+
+    /*pagination: {
+        el: '.swiper-pagination',
+        clickable:true,
+        //dynamicBullets: true,
+        type: 'progressbar'
+    },*/
+    /* slideToClickedSlide: true,
+    centeredSlides: true,
+
+    //a11y: true,
+    //keyboardControl: true,
+        // pagination: '.swiper-pagination',
+    //paginationClickable: true,
+        /*mousewheel: {
+        sensitivity: 5,
+        eventntsTarget: ".image-slider",
+    },*/
+
+
+    /*grabCursor: true,
+
+    touchRatio: 1,
+    freeMode: true,
+    pagination: false,
+    scrollContainer: false,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+    slidesPerView: 3,
+    watchOverflow: true,
+    initialSlide: 0,*/
+
+   /* autoplay: {
+        delay: 4000,
+        stopOnLastSlide: false,
+        diasbleOnInteraction: false,
+    },*/
+    /*speed: 800,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },*/
+//});

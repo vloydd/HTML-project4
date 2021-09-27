@@ -119,11 +119,13 @@ html, body {
 .info__title {
     font-size: 35px;
     margin: 0 0 30px 0;
+    letter-spacing: 0.032em;
 }
 .info__text {
     width: 500px;
     margin: 0;
     padding: 0;
+    color: #818181;
 }
 
 .forms {
@@ -138,7 +140,7 @@ html, body {
     margin-bottom: 25px;*/
     display: flex;
     flex-direction: column;
-   /* align-items: center;*/
+    /* align-items: center;*/
 }
 
 .popup-title {
@@ -257,6 +259,110 @@ html, body {
 
 
 
+
+
+/*.siteb-slider .swiper-wrapper {
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+
+@media (max-width: 800px) {
+	.siteb-slider__slide {
+		width: 350px;
+		margin: 0;
+		flex-shrink: 0;
+	}
+
+	.siteb-slider .swiper-wrapper {
+		justify-content: initial;
+		flex-wrap: nowrap;
+	}
+}
+
+/*SLIDER (SITEBUILDING)*/
+.swiper-wrapper {
+    flex-wrap: none;
+}
+.sitebuilding__wrapper {
+    text-align:center;
+    padding: 0 15px;
+    margin: 0 auto;
+    //width: 1220px;
+    overflow: hidden;
+}
+/*.siteb-slider .swiper-wrapper {
+	justify-content: space-between;
+	flex-wrap: wrap;
+}*/
+.site__tittle {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+.siteb-slider {
+    /*width: 100%;*/
+    margin: 0 auto;
+    //width: 1220px;
+}
+.siteb-slider__wrapper {   
+    display: flex; 
+    margin: auto;
+    position: relative;
+}
+.siteb-slider__slide {
+    
+    width: 350px;
+    margin-left:auto;
+    margin-right: auto;
+    
+}
+.siteb-slider__img {
+    text-align: center;
+}
+.siteb-slider__img img {
+    //  max-width: 100%;
+}
+.siteb-slider__title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+.siteb-slider__tittle__text {
+    text-align: center;
+
+}
+.siteb-slider__line {
+    border-color: #3498db;
+    background-color: #3498db;
+}
+.siteb-slider__info {
+    text-align: center;
+
+}
+.siteb-slider__info__text {
+    text-align: center;
+    color: #818181;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0.025em;
+    padding: 0 10px;
+    letter-spacing: 0.02em;
+
+}
+.siteb-slider .swiper-button-next::after,
+.siteb-slider .swiper-button-prev::after {
+    cursor:auto;
+
+    color:#f7f7f7;  
+}
+.sideb-slider .swiper-pagination-progressbar-fill {
+    background-color: #3498db;
+}
+
+.siteb-slider .swiper-scrollbar-drag {
+    background-color: #3498db;
+}
 
 
 
