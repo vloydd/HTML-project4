@@ -163,29 +163,28 @@ window.addEventListener('resize', () => {
 	mobileSlider();
 });
 
-/*new Swiper('.siteb-slider', {
-    //loop: true,
+new Swiper('.review__swiper', {
+    loop: true,
     slidesPerView: 1,
 
     
-    /*scrollbar: {
+    scrollbar: {
         el: '.swiper-scrollbar',
         dragable: true
     },
-    */
-    //touchRatio: 0,    
+
     
-   // slideToClickedSlide: true,
-    /*keyboard: {
+    slideToClickedSlide: true,
+    keyboard: {
         enabled: true,
         onlyInViewport: true,
         pageUpDown: true,
     },
-    *///autoheight: true,
+    ///autoheight: true,
     // slidesPerView: 3,
     
     //watchOverflow: true,
-        //effect: 'slide',
+        effect: 'slide',
     //spaceBetween: 50,
     //initialSlide: 0,
     //init: false,    
@@ -213,16 +212,16 @@ window.addEventListener('resize', () => {
             grabCursor: true,
             touchRatio: 3,
         }
-    },
+    },*/
 
 
-    /*pagination: {
+    pagination: {
         el: '.swiper-pagination',
         clickable:true,
         //dynamicBullets: true,
         type: 'progressbar'
-    },*/
-    /* slideToClickedSlide: true,
+    },
+    slideToClickedSlide: true,
     centeredSlides: true,
 
     //a11y: true,
@@ -250,14 +249,14 @@ window.addEventListener('resize', () => {
     watchOverflow: true,
     initialSlide: 0,*/
 
-   /* autoplay: {
-        delay: 4000,
+    autoplay: {
+        delay: 10000,
         stopOnLastSlide: false,
         diasbleOnInteraction: false,
-    },*/
+    },
     /*speed: 800,
     effect: 'fade',
     fadeEffect: {
         crossFade: true,
     },*/
-//});
+});

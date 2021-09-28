@@ -39,69 +39,69 @@
             <div class="main">
                 <content class="content">
                     <div class="content__wrapper">
-                        <div class="forminfo">
-                            <div class="info">
-                                <h3 class="info__title">Курси програмування у Луцьку</h3>
-                                <p class="info__text">
-                                    Сфера IT розвивається максимально швидко. 
-                                    Зараз дуже популярно здобувати освіту, що повʼязана з IT. 
-                                    Існує лише одна проблема - брак дійсно кваліфікованих спеціалістів в Україні. 
-                                    Під час навчання в університеті ми отримуємо мало практики і"живих", реальнох кейсів. 
-                                    IT школа OxIT створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання. 
-                                    щоб стати IT спеціалістом. Чекаємо вас на нших курсах з програмування в Луцьку. 
-                                    Старт наступного курсу з 3 вересня. </p>
-                            </div>
-                            <div class="forms">
-                                <div id="feedback">
-                                    <div class="popup-body">
-                                        <div class="popup-content">
-                                            <div class="popup-main">
-                                                <div class="popup-title">
-                                                    <p class="form__title">Зареєструватися на курси</p>
+                        <div class="form">
+                            <div class="form__wrapper">
+                                <div class="forminfo">
+                                    <div class="info">
+                                        <h3 class="info__title">Курси програмування у Луцьку</h3>
+                                        <p class="info__text">
+                                            Сфера IT розвивається максимально швидко. 
+                                            Зараз дуже популярно здобувати освіту, що повʼязана з IT. 
+                                            Існує лише одна проблема - брак дійсно кваліфікованих спеціалістів в Україні. 
+                                            Під час навчання в університеті ми отримуємо мало практики і"живих", реальнох кейсів. 
+                                            IT школа OxIT створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання. 
+                                            щоб стати IT спеціалістом. Чекаємо вас на нших курсах з програмування в Луцьку. 
+                                            Старт наступного курсу з 3 вересня. </p>
+                                    </div>
+                                    <div class="forms">
+                                        <div id="feedback">
+                                            <div class="popup-body">
+                                                <div class="popup-content">
+                                                    <div class="popup-main">
+                                                        <div class="popup-title">
+                                                            <p class="form__title">Зареєструватися на курси</p>
+                                                        </div>
+                                                        <form id="form" class="myform" action="#" method="get">
+                                                            <div class="form__item">
+                                                                <label class="form__label">Імʼя*</label>
+                                                                <input type="text" id="name" name="name" class="form__input _req" onfocus="this.value=''" placeholder="Імʼя">
+                                                            </div>
+                                                            <div class="form__item">
+                                                                <label class="form__label">Прізвище*</label>
+                                                                <input type="text" id="surname" name="surname" class="form__input _req" onfocus="this.value=''" placeholder="Прізвище">
+                                                            </div>
+                                                            <div class="form__item">
+                                                                <label class="form__label">Мене більше цікавить*</label>
+                                                                <input type="text" id="speciality" name="specs" class="form__input _req _spec" onfocus="this.value= ''" placeholder="developer or QA">
+                                                            </div>
+                                                            <div class="form__item">
+                                                                <label class="form__label">Телефон*</label>
+                                                                <input type="phone" id="phone" name="phone" class="form__input _req  _tel" onfocus="this.value=''" placeholder="Номер телефону: +38 XXX XX XX XXX">
+                                                            </div>
+                                                            <div class="form__item">
+                                                                <label class="form__label">Email*</label>
+                                                                <input type="text" id="email" name="email" class="form__input _req _email" onfocus="this.value=''" placeholder="Email">
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" id="agreee" class="form__checkbox _check _req">
+                                                                <label for="agree" class="form__label"><span>Я погоджуюся із <a href="#">Політикою Конфіденційності</a></span></label>
+                                                            </div>
+                                                                <div id="error"></div>
+                                                            
+                                                            <input class="form__submit" type="submit" name="submit" value="Зареєструватися зараз">
+                                                        </form>
+                                                    </div>
                                                 </div>
-                                                <form id="form" class="myform" action="#" method="get">
-                                                    <div class="form__item">
-                                                        <label class="form__label">Імʼя*</label>
-                                                        <input type="text" id="name" name="name" class="form__input _req" onfocus="this.value=''" placeholder="Імʼя">
-                                                    </div>
-                                                    <div class="form__item">
-                                                        <label class="form__label">Прізвище*</label>
-                                                        <input type="text" id="surname" name="surname" class="form__input _req" onfocus="this.value=''" placeholder="Прізвище">
-                                                    </div>
-                                                    <div class="form__item">
-                                                        <label class="form__label">Мене більше цікавить*</label>
-                                                        <input type="text" id="speciality" name="specs" class="form__input _req _spec" onfocus="this.value= ''" placeholder="developer or QA">
-                                                    </div>
-                                                    <div class="form__item">
-                                                        <label class="form__label">Телефон*</label>
-                                                        <input type="phone" id="phone" name="phone" class="form__input _req  _tel" onfocus="this.value=''" placeholder="Номер телефону: +38 XXX XX XX XXX">
-                                                    </div>
-                                                    <div class="form__item">
-                                                        <label class="form__label">Email*</label>
-                                                        <input type="text" id="email" name="email" class="form__input _req _email" onfocus="this.value=''" placeholder="Email">
-                                                    </div>
-                                                    <!--<div class="form__item">
-                                                        <label class="form__label">Сообщение</label>
-                                                        <textarea name="message" id="message" class="form__input"></textarea>
-                                                    </div>-->
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="agreee" class="form__checkbox _check _req">
-                                                        <label for="agree" class="form__label"><span>Я погоджуюся із <a href="#">Політикою Конфіденційності</a></span></label>
-                                                    </div>
-                                                        <div id="error"></div>
-                                                    
-                                                    <input class="form__submit" type="submit" name="submit" value="Зареєструватися зараз">
-                                                </form>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>  
                             </div>
                         </div>
-                    </div>
+                        
                     <div class="sitebuilding">
                         <div class="sitebuilding__wrapper">
-                            <div class="site__tittle">
+                            <div class="title">
                                 <p class="site__label">Курс «Розробка сайтів»</p>
                                 </div>
                                 <div class="siteb-slider" data-mobile="false">
@@ -112,7 +112,7 @@
                                                 <img src="img/icons/course/course-icon-1.png" title="wordpress" alt="wordpressimg">
                                             </div>
                                             <div class="siteb-slider__title">
-                                                <p class="siteb-slider__tittle__text">Розробка сайтів на WordPress</p>
+                                                <p class="siteb-slider__title__text">Розробка сайтів на WordPress</p>
                                             </div>
                                             <hr class="siteb-slider__line">
                                             <div class="siteb-slider__info">
@@ -129,7 +129,7 @@
                                                 <img src="img/icons/course/course-icon-2.png" title="drupal" alt="drupalimg">
                                             </div>
                                             <div class="siteb-slider__title">
-                                                <p class="siteb-slider__tittle__text">Розробка сайтів на Drupal 8</p>
+                                                <p class="siteb-slider__title__text">Розробка сайтів на Drupal 8</p>
                                             </div>
                                             <hr class="siteb-slider__line">
                                             <div class="siteb-slider__info">
@@ -147,7 +147,7 @@
                                                 <img src="img/icons/course/course-icon-3.png" title="QA" alt="QAimg">
                                             </div>
                                             <div class="siteb-slider__title">
-                                                <p class="siteb-slider__tittle__text">Ознайомлення з тестуванням</p>
+                                                <p class="siteb-slider__titte__text">Ознайомлення з тестуванням</p>
                                             </div>
                                             <hr class="siteb-slider__line">
                                             <div class="siteb-slider__info">
@@ -164,11 +164,161 @@
                                     <div class="swiper-pagination"></div>
                                 </div>
                             </div>
-                            
                         </div>
+
+
+                        <div class="stats">
+                            <div class="stats__container">
+                                <ul class="stats__list">
+                                    <li>
+                                        <div class="stats__item">
+                                            <img class="stats__item_photo" src="img/icons/static/statistic-icon-1.png" title="loclogo" alt="locationimg">
+                                            <div class="stats__numbers">
+                                                25
+                                            </div>
+                                            <div class="stats__about">
+                                                курсів оранізовано
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="stats__item">
+                                            <img class="stats__item_photo" src="img/icons/static/statistic-icon-2.png" title="loclogo" alt="locationimg">
+                                            <div class="stats__numbers">
+                                                836
+                                            </div>
+                                            <div class="stats__about">
+                                                годин занять проведено
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="stats__item">
+                                            <img class="stats__item_photo" src="img/icons/static/statistic-icon-3.png" title="loclogo" alt="locationimg">
+                                            <div class="stats__numbers">
+                                                500
+                                            </div>
+                                            <div class="stats__about">
+                                                студентів навчено
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="stats__item">
+                                            <img class="stats__item_photo" src="img/icons/static/statistic-icon-4.png" title="loclogo" alt="locationimg">
+                                            <div class="stats__numbers">
+                                                120
+                                            </div>
+                                            <div class="stats__about">
+                                                випускників курсів працевлаштовано
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="review__wrapper">
+                            <div class="title">Що кажуть студенти наших курсів:</div>
+                            <div class="review__swiper">
+                                <div class="reviewe__swiper__wrapper swiper-wrapper">
+                                    <div class="review__slide swiper-slide">
+                                        <blockquote class="blockquote-8">
+                                            <p class="review__text">
+                                                Під час проходження курсів Drupal у школі OxIT я навчився 
+                                                створювати не досить складні сайти та знайшов справу, якою хочу займатись. 
+                                                Після успішного завершення курсів мені надали можливість 
+                                                продовжити навчання в якості  Intern Site Builder. 
+                                                Зараз я можу сказати що Drupal та OxIT повністю змінили моє життя.
+                                            </p>
+                                            <div class="review__author"> НЕ Профан Коля</div>
+                                            <div class="review__spec">Drupal-девелопер</div>
+                                        </blockquote>
+                                    
+                                    </div>
+                                    <div class="review__slide swiper-slide">
+                                        <blockquote class="blockquote-8">
+                                            <p class="review__text">
+                                                Радію, що закінчив курси. Це було корисно, інформативно, професійно і ,найголовніше - мотивуюче! 
+                                                Я в черговий раз переконався, що web-дизайн - це моє. 
+                                                Це той напрямок, який приносить мені задоволення!
+                                                Курси реально круті! Круті у тому що дуже багато практики, доступно піднесеної інформації, 
+                                                а також у всіх дрібничках, все на вищому рівні, 
+                                                задоволений що обрав саме Вашу школу! 
+                                                Буду рекомендувати всім знайомим!
+                                            </p>
+                                            <div class="review__author">Профан Ігор</div>
+                                            <div class="review__spec">WordPress-девелопер</div>
+                                        </blockquote>
+                                    
+                                    </div>
+
+                                    <div class="review__slide swiper-slide">
+                                        <blockquote class="blockquote-8">
+                                            <p class="review__text">
+                                                Велике спасибі за відкриті двері в неосяжний світ IT. 
+                                                З даними знаннями можна сміливо вриватися в роботу тестувальника.
+                                                Після вивчення QA тут я зрозумів що тут є дуже гарні можливості для розвитку. 
+                                                Я навчився планувати свої завдання, ставити цілі, дізнався багато нового. 
+                                                Мені було приємно вивчати нові види  тестувань, а саме функціональне, регресивне, 
+                                                системне, тестування  швидкодії. Отже, це дуже цікаво і корисно.
+                                            </p>
+                                            <div class="review__author">Профан Іван</div>
+                                            <div class="review__spec">Тестувальник</div>
+                                        </blockquote>
+                                    
+                                    </div>
+
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="contacts">
+                            <div class="contacts__container">
+                                <ul class="contacts__list">
+                                    <li>
+                                        <div class="contacts__item">
+                                            <img class="contacts__item_photo" src="img/icons/footer/phone.png" title="phonelogo" alt="phoneimg">
+                                            <p>Телефон</p>
+                                            <a href="#">+38 067 332 17 55</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="contacts__item">
+                                            <img class="contacts__item_photo" src="img/icons/footer/email.png" title="emaillogo" alt="emailimg">
+                                            <p>E-mail</p>
+                                            <a href="#">office@it.volyn.ua</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="contacts__item">
+                                            <img class="contacts__item_photo" src="img/icons/footer/location.png" title="loclogo" alt="locationimg">
+                                            <p>Адреса</p>
+                                            <a href="#">вул. Боженка 34г, м.Луцьк</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="contacts__item">
+                                            <img class="contacts__item_photo" src="img/icons/footer/facebook.png" title="facelogo" alt="facebookimg">
+                                            <p>Facebook</p>
+                                            <a href="#">facebook.com/oxitschool</a>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </content>
                         
                     </div>
-                </content>
+
+
+                    
+
             
             </div>
 
@@ -176,41 +326,6 @@
         <footer class="footer">
             <div class="footsection">
                 <div class="footin980">
-                    <div class="contacts">
-                        <div class="contacts__container">
-                            <ul class="contacts__list">
-                                <li><a href="#">
-                                    <div class="contacts__item">
-                                        <img class="contacts__item_photo" src="img/icons/footer/phone.png" title="phonelogo" alt="phoneimg">
-                                        <p>Телефон</p>
-                                        <a href="#">+38 067 332 17 55</a>
-                                    </div>
-                                </li>
-                                <li><a href="#">
-                                    <div class="contacts__item">
-                                        <img class="contacts__item_photo" src="img/icons/footer/email.png" title="emaillogo" alt="emailimg">
-                                        <p>E-mail</p>
-                                        <a href="#">office@it.volyn.ua</a>
-                                    </div>
-                                </li>
-                                <li><a href="#">
-                                    <div class="contacts__item">
-                                        <img class="contacts__item_photo" src="img/icons/footer/location.png" title="loclogo" alt="locationimg">
-                                        <p>Адреса</p>
-                                        <a href="#">вул. Боженка 34г, м.Луцьк</a>
-                                    </div>
-                                </li>
-                                <li><a href="#">
-                                    <div class="contacts__item">
-                                        <img class="contacts__item_photo" src="img/icons/footer/facebook.png" title="facelogo" alt="facebookimg">
-                                        <p>Facebook</p>
-                                        <a href="#">facebook.com/oxitschool</a>
-                                    </div>
-                                </li>
-                                
-                            </ul>
-                        </div>
-                    </div>
                     <div class="copyrights">
                         <div class="copyrights__container">
                             <div class="copyrights__item">
