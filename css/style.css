@@ -5,7 +5,8 @@ html, body {
   padding: 0;
   height: 100%;
   max-width: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  min-height: 100%; }
 
 #wrapper {
   font-family: 'Open Sans';
@@ -15,6 +16,26 @@ html, body {
   display: flex;
   flex-direction: column;
   color: #ffffff; }
+
+.overhided {
+  height: 100px;
+  overflow: hidden;
+  background-color: transparent; }
+
+.title {
+  color: #333333;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0 auto; }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 9999; }
 
 .headsection {
   display: block;
@@ -80,20 +101,21 @@ html, body {
 .navig ul {
   margin: auto auto; }
 
-/*.main {
-    flex-grow: 1;
+.main {
+  flex-grow: 1; }
 
-}*/
 .content__wrapper {
   background-color: #ffffff;
   width: 100%; }
 
 .form__wrapper {
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  margin-top: 100px; }
 
 .forminfo {
   width: 1220px;
   display: flex;
+  margin-top: 55px;
   padding: 55px 15px 30px 15px;
   margin: 0 auto; }
 
@@ -169,6 +191,15 @@ html, body {
 
 .myform .form-group {
   padding-bottom: 2px; }
+
+.labelreq {
+  display: flex;
+  text-align: center;
+  vertical-align: middle; }
+
+.label__rq {
+  height: 7px;
+  margin: auto 0 auto 2px; }
 
 .form__label {
   display: block;
@@ -257,7 +288,8 @@ html, body {
   text-align: center;
   padding: 0 15px;
   margin: 0 auto;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-top: -100px; }
 
 /*.siteb-slider .swiper-wrapper {
 	justify-content: space-between;
@@ -330,7 +362,7 @@ html, body {
   display: flex;
   color: #ffffff; }
 
-.stats__container {
+.stats__wrapper {
   width: 1220px;
   padding: 0 15px;
   margin: auto; }
@@ -372,36 +404,123 @@ html, body {
   margin-bottom: 25px; }
 
 .review {
-  color: #333333; }
+  margin-top: -100px; }
+
+.review__container {
+  color: #333333;
+  margin-top: 65px; }
 
 .review__wrapper {
   /*width: 980px;
     /*height: 530px;*/
+  margin-top: 65px;
+  margin-top: 65px;
   padding: 0 15px;
   margin: 0 auto;
   text-align: center; }
 
 .review__title {
-  color: #333333;
-  text-align: center; }
+  margin-bottom: 25px; }
 
-.reviewe__slide {
-  text-align: center; }
+.review__swiper {
+  align-items: center; }
+
+.review__swiper__wrapper {
+  align-items: center; }
+
+.review__slide {
+  text-align: center;
+  align-items: center; }
 
 .review__text {
-  /*width: 875px;*/
+  padding-top: 40px;
   color: #666666;
   text-align: center;
-  padding: 0; }
+  padding: 0;
+  font-size: 21px;
+  width: 880px;
+  margin: 0 auto 40px auto;
+  display: block; }
 
 .review__author {
-  color: #333333; }
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 5px; }
 
 .review__spec {
-  color: #a7a7a7; }
+  color: #a7a7a7;
+  font-style: italic; }
 
 .reviewe__slide .swiper-slide {
   width: 980px; }
+
+.review__slide {
+  width: 100%;
+  text-align: center; }
+
+.blockquote-8 {
+  position: relative;
+  padding: 16px 0px;
+  margin: 16px 46px;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 980px;
+  margin-bottom: 105px; }
+
+.blockquote-8:before,
+.blockquote-8:after {
+  position: absolute;
+  color: #c4c4c4;
+  font-size: 100px;
+  font-family: 'Staatliches', sans-serif;
+  height: 100px; }
+
+.blockquote-8:before {
+  content: '“';
+  left: 0px;
+  top: -20px; }
+
+.blockquote-8:after {
+  content: '”';
+  right: 0px;
+  bottom: 40px; }
+
+.blockquote-8 cite {
+  color: #337AB7;
+  font-size: 15px;
+  padding-top: 10px;
+  display: block; }
+
+.view__pagination {
+  margin-bottom: 35px; }
+
+.review__pagination .swiper-pagination-bullet-active {
+  background-color: #666666; }
+
+.review__pagination .swiper-pagination-bullet {
+  background-color: #b3b3b3; }
+
+.video {
+  text-align: center;
+  width: 100%;
+  margin-top: -100px; }
+
+.video__container {
+  background-color: #f7f7f7;
+  padding: 60px 0; }
+
+.video__wrapper {
+  width: 1220px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.video__text {
+  margin-bottom: 15px;
+  display: block;
+  height: 130px;
+  color: #787878; }
 
 .footsection {
   margin-top: auto;
@@ -507,35 +626,48 @@ html, body {
   color: #938e8e;
   text-decoration: none; }
 
-.blockquote-8 {
-  position: relative;
-  padding: 16px 24px;
-  margin: 16px 46px;
-  font-size: 16px;
-  text-align: center; }
-
-.blockquote-8:before,
-.blockquote-8:after {
-  position: absolute;
-  color: #c4c4c4;
-  font-size: 100px;
-  font-family: 'Staatliches', sans-serif;
-  line-height: 100px; }
-
-.blockquote-8:before {
-  content: '“';
-  left: -20px;
-  top: -10px; }
-
-.blockquote-8:after {
-  content: '”';
-  right: -20px;
-  bottom: -10px; }
-
-.blockquote-8 cite {
-  color: #337AB7;
-  font-size: 15px;
-  padding-top: 10px;
-  display: block; }
+@media (hover: hover) {
+  .list li:nth-child(#1) span {
+    transition-delay: 0s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.05s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.1s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.15s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.2s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.25s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.3s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.35s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.4s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.45s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.5s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.55s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.6s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.65s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.7s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.75s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.8s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.85s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.9s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 0.95s; }
+  .list li:nth-child(#1) span {
+    transition-delay: 1s; } }
 
 /*# sourceMappingURL=style.css.map */

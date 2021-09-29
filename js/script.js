@@ -105,7 +105,7 @@ function telTest(input) {
     //const res = /^[0-9]+$/ //just a numbers;
 
     //different formats (the best way is just 10 numbers);
-    const res = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+    const res = /^\(?[+ ]?(\d{2})\)?[- ]?(\d{3})?[- ]?(\d{2})?[- ]?(\d{2})[- ]?(\d{3})$/;
     return !res.test(input.value);
 }
 
@@ -180,10 +180,7 @@ new Swiper('.review__swiper', {
         onlyInViewport: true,
         pageUpDown: true,
     },
-    ///autoheight: true,
-    // slidesPerView: 3,
     
-    //watchOverflow: true,
         effect: 'slide',
     //spaceBetween: 50,
     //initialSlide: 0,
@@ -218,11 +215,10 @@ new Swiper('.review__swiper', {
     pagination: {
         el: '.swiper-pagination',
         clickable:true,
-        //dynamicBullets: true,
-        type: 'progressbar'
     },
     slideToClickedSlide: true,
     centeredSlides: true,
+    paginationClickable: true,
 
     //a11y: true,
     //keyboardControl: true,
@@ -254,9 +250,9 @@ new Swiper('.review__swiper', {
         stopOnLastSlide: false,
         diasbleOnInteraction: false,
     },
-    /*speed: 800,
+    speed: 800,
     effect: 'fade',
     fadeEffect: {
         crossFade: true,
-    },*/
+    },  
 });

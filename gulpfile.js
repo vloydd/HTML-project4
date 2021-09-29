@@ -12,7 +12,7 @@ gulp.task('compile', function(){
 
 })
 
-gulp.task('watch', function(){
-    gulp.watch('./scss/**/*.scss', ['compile'])
+    gulp.task('watch', function(){
+        gulp.watch('./scss/**/*.scss', ['compile'])
 
-})
+    })
