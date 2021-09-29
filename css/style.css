@@ -522,6 +522,16 @@ header {
   height: 130px;
   color: #787878; }
 
+.video__content {
+  margin-bottom: -5px;
+  height: 520px; }
+
+.maps {
+  height: 400px; }
+
+.maps__wrapper {
+  margin-bottom: -5px; }
+
 .footsection {
   margin-top: auto;
   display: block;
