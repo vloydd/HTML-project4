@@ -359,11 +359,11 @@ new Swiper('.mentors__slider', {
     watchOverflow: true,
     initialSlide: 0,*/
 
-    /*autoplay: {
+    autoplay: {
         delay: 10000,
         stopOnLastSlide: false,
         diasbleOnInteraction: false,
-    },*/
+    },
     speed: 800,
     effect: 'fade',
     fadeEffect: {
