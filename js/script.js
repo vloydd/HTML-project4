@@ -131,7 +131,9 @@ window.addEventListener('resize', () => {
     mobile();   
 });*/
 
-let mySwiper;
+
+//REQUIred;
+/*let mySwiper;
 
 function mobileSlider() {
 	if (window.innerWidth <= 800 && slider.dataset.mobile == 'false') {
@@ -161,9 +163,26 @@ mobileSlider()
 
 window.addEventListener('resize', () => {
 	mobileSlider();
+});*/
+
+new Swiper('.siteb-slider', {
+    slidesPerView: 3,
+    //width: 1220,
+    loop: true,
+    initalSlide: 1,
+    slideToClickedSlide: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
 });
 
-new Swiper('.review__swiper', {
+
+
+
+
+new Swiper('.review__slider', {
     loop: true,
     slidesPerView: 1,
 
@@ -250,6 +269,101 @@ new Swiper('.review__swiper', {
         stopOnLastSlide: false,
         diasbleOnInteraction: false,
     },
+    speed: 800,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },  
+});
+
+
+new Swiper('.mentors__slider', {
+    loop: true,
+    slidesPerView: 1,
+
+    
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        dragable: true
+    },
+
+    
+    slideToClickedSlide: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+    
+        effect: 'slide',
+    //spaceBetween: 50,
+    //initialSlide: 0,
+    //init: false,    
+    //width: 1220,
+    /*breakpoints: {
+        851: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+            init: false,
+            grabCursor: false,
+            touchRatio: 0, 
+            loop: false,  
+        },
+        601: {
+            loop: false,
+            slidesPerView: 2,
+            grabCursor: true,
+            spaceBetween: 10,
+            touchRatio: 2,
+
+        },
+        0: {
+            loop: false,
+            slidesPerView: 1,
+            grabCursor: true,
+            touchRatio: 3,
+        }
+    },*/
+
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable:true,
+    },
+    slideToClickedSlide: true,
+    centeredSlides: true,
+    paginationClickable: true,
+
+    //a11y: true,
+    //keyboardControl: true,
+        // pagination: '.swiper-pagination',
+    //paginationClickable: true,
+        /*mousewheel: {
+        sensitivity: 5,
+        eventntsTarget: ".image-slider",
+    },*/
+
+
+    /*grabCursor: true,
+
+    touchRatio: 1,
+    freeMode: true,
+    pagination: false,
+    scrollContainer: false,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+    slidesPerView: 3,
+    watchOverflow: true,
+    initialSlide: 0,*/
+
+    /*autoplay: {
+        delay: 10000,
+        stopOnLastSlide: false,
+        diasbleOnInteraction: false,
+    },*/
     speed: 800,
     effect: 'fade',
     fadeEffect: {
