@@ -31,6 +31,7 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
     min-height: 100%;
+    transition: all 0.7s ease-out;
 }
 #wrapper {
     font-family: 'Open Sans';
@@ -88,17 +89,18 @@ header {
 .headin1220 {
     position: relative;
     padding: 0px 15px;
-    width: 1220px;
+    max-width: 1220px;
     margin: 0 auto;
 }
 .headcont {
-    width: 1220px;
+    max-width: 1220px;
     display: flex;
+    transition: 0.7s;
 }
 .logo {
     max-width: 80px;
     max-height: 80px;
-    margin-right: auto;
+   // margin-right: auto;
     transition: 0.7s;
     &:hover {
         width: 100px;
@@ -114,8 +116,12 @@ header {
     justify-content: center;
     padding: 0;
     margin:  auto 0;
-    text-align: center;
-    align-items: center;
+    margin-left: auto;
+    //margin-left:auto;
+    //text-align: center;
+    //align-items: center;
+    //float:right;
+    //  justify-self: end;
     
 }
 
@@ -124,7 +130,7 @@ header {
     height: 40px;
     display: flex;
     align-items: center;
-    transition: 0.7s;
+    transition: all 0.7s ease-out;
     &:hover {
         background-color: #337ab7;
         border-radius: 20px;
@@ -158,7 +164,7 @@ header {
     opacity: 1;
     transition: 0.7s;
     &:focus {
-        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+        text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
         border-bottom: 2px solid #ffffff;
     }
 
@@ -282,6 +288,17 @@ header {
     margin: auto 0 auto 2px;
 }
 .form__label {
+    margin: 0 0 7px 0;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #535353;
+    height: 16px;
+}
+.checkbox {
+    align-items: left;
+}
+.checkbox p {
     display: block;
     margin: 0 0 7px 0;
     font-size: 16px;
@@ -290,11 +307,14 @@ header {
     color: #535353;
     height: 16px;
 }
+.span {
+    margin: 0;
+}
 
 
 .form__input {
     display: block;
-    margin: 0 auto;
+    //margin: 0 auto;
     max-width: 568px;
     min-width: 268px;
     height: 50px;
@@ -323,7 +343,7 @@ header {
 }
 
 .form__submit  {
-    width: 370px;
+    max-width: 370px;
     height: 50px;
     color: #ffffff;
     background-color:#337ab7;
@@ -698,22 +718,24 @@ header {
 }
 .video__container {
     background-color: #f7f7f7; 
-    padding-bottom: 60px; 
+    padding-bottom: 65px; 
+    display: flex;
+    flex-direction: column  ;
 }
 .video__wrapper {
-    width: 1220px;
+    max-width: 1220px;
     padding: 0 15px;
     margin: 0 auto;
 }
 .video__text {
     margin-bottom: 15px;
     display: block;
-    height: 130px;
+    min-height: 130px;
     color: #787878;
 }
 .video__content {
    // margin-bottom: -5px;
-    height: 520px;
+    max-height: 520px;
 }
 
 
@@ -973,7 +995,10 @@ header {
 }
 @media (min-width: 1200px ) {
     .form__input {
-        //min-width:568px;
+        min-width:568px;
+    }
+    .form__submit {
+        min-width: 370px;
     }
     .stats__wrapper {
         width: 1220px;
@@ -981,19 +1006,42 @@ header {
     .stats__item {
         width: 300px
     }
+    .checkbox {
+        text-align: left;
+    }
+    .headcont {
+        width: 1220px;
+    }
+    .headin1220 {
+        width: 1220px;
+    }
+    
     
 }
-@media (hover: hover) {
+@media (max-width: 856px ) {
+    .popup-main {
+        align-items: center;
+    }
+    .form__input {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+}
+/*@media (hover: hover) {
     @for $i from 0 through 20 {
         .list li:nth-child(#1) span {
         transition-delay: 0.05s * $i;
         }
     }
-}
+}*/
 @media (max-width: 1220px ) {
-    /*.video__text {
-        width: calc(300px + (1220 - 300) * ((1220px - 320px) / (1220 - 320)))
-    }*/
+    .headcont{
+        @include adaptiv-value("width", 1220, 290, 2);
+    }
+    .video__text {
+        @include adaptiv-value("width", 1220, 290, 0);
+    }
     #wrapper {
         max-width:970px;
     }
@@ -1014,7 +1062,10 @@ header {
 }
 @media (max-width: 1220px ) {
     .logo {
-        @include adaptiv-value("width", 80, 60, 0);
+       // @include adaptiv-value("width", 80, 60, 0);
+    }
+    .headcont {
+       // @include adaptiv-value("width", 1220, 320, 0);
     }
     #wrapper {
         max-width:none;
@@ -1026,6 +1077,7 @@ header {
         max-width: 300px;
     }
     .stats__list {
+        //@include adaptiv-value("width", 1220, 320, 0);
         flex-wrap: wrap;
     }
     .headcont {
@@ -1036,32 +1088,44 @@ header {
     }
     .forminfo {
         flex-wrap: wrap!important;
-        margin: 0 auto; 
+        //margin: 0 auto; 
         //padding: 0 10px;
-        @include adaptiv-value("padding", 15, 10, 0)
+        //@include adaptiv-value("padding", 15, 10, 0)
+       // @include adaptiv-value("padding-top", 55, 0, 0);
     }
     .info {
         //margin: 0 auto;
         //max-width: 300px;
         @include adaptiv-value("margin-bottom", 85, 35, 0);
+        //@include adaptiv-value("margin-top", 0, 30, 0);
     }
     .info__title {
         @include adaptiv-value("font-size", 35, 25, 0);
         @include adaptiv-value("margin-bottom", 30, 20, 0);
+
     }
     .info__text {
         //max-width: 300px;
         @include adaptiv-value("width", 500, 290, 0);
+        @include adaptiv-value("font-size", 16, 15, 0);
     }
     .forms {
         margin: 0 auto;
+    }
+    .form__title {
+        @include adaptiv-value("margin-left", 0, 2, 0);
+        @include adaptiv-value("margin-right", 0, 2, 0);
+        @include adaptiv-value("font-size", 23, 22, 0);
     }
     .form__input {
         //min-width: 290px;
         //max-width: calc (290px + (1220 - 290) * ((1220px - 320px) / (1220 - 320)) );
         @include adaptiv-value("width", 568, 268, 0);
-        @include adaptiv-value("margin-left", 35, 5, 0);
-        @include adaptiv-value("margin-right", 35, 5, 0);
+       // @include adaptiv-value("margin-left", 35, 0, 0);
+        //@include adaptiv-value("margin-right", 35, 0, 0);
+    }
+    .form__submit {
+        @include adaptiv-value("width", 370, 277, 0);
     }
     .stats__item {
         @include adaptiv-value("width", 300, 120, 0);
@@ -1080,5 +1144,112 @@ header {
     }
     .stats__list li {
         @include adaptiv-value("height", 183, 173, 0);
+    }
+    .video__content iframe  {
+        @include adaptiv-value("width", 1220, 290, 0);
+        @include adaptiv-value("height", 520, 190, 0);
+    }
+    
+}
+.nav-cont {
+    width: 100%;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    //position: fixed;
+    //top: 0;
+    //width: 100%;
+    //box-sizing: border-box;
+    //z-index: 9999;
+}
+.navbar {
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+    height: 100px;
+    max-width: 1220px;
+    margin: 0 auto;
+    width: 90%;
+}
+.logo {
+    justify-self: start;
+}
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    list-style: none;
+    text-align: center;
+    justify-self: end;
+    padding: 0; 
+}
+
+/*.nav-menu li {
+    list-style: none;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transition: all 0.7s ease-out;
+    &:hover {
+        background-color: #337ab7;
+        border-radius: 20px;
+        vertical-align: middle;
+        color: #ffffff;
+        margin: 0 10px; 
+        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.nav-menu li:last-child {
+    background-color: #337ab7;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+.nav-menu li:last-child .menu__item {
+    color: #ffffff; 
+
+}
+.nav-menu li:hover .menu__item {
+    color: #ffffff;
+}
+.menu__item {
+
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #666666;
+    text-decoration: none;
+    margin: 0 20px;
+    opacity: 1;
+    transition: 0.7s;
+    &:focus {
+        text-shadow: 10px 5px 5px rgba(0, 0, 0, );
+        border-bottom: 2px solid #ffffff;
+    }
+}/*
+
+.nav-menu a:hover {
+    //border-bottom: 2px solid #ffffff;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    
+}*/
+.menu-toggle .bar {
+    width: 25px;
+    background-color: yellow;
+    height: 3px;
+    margin: 5px auto;
+}
+@media screen and (max-width: 768px) {
+    .nav-cont {
+        position: relative;
+    }
+    .nav-menu {
+        display: grid;
+        grid-template-columns: auto;
+        background-color: aqua;
+        width: 100%;
+        position: absolute;
     }
 }
