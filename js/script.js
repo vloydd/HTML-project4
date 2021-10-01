@@ -370,3 +370,34 @@ new Swiper('.mentors__slider', {
         crossFade: true,
     },  
 });
+const menu = document.querySelector('#mobile-menu');
+const links = document.querySelector('.menu');
+
+menu.addEventListener('click', function () {
+    menu.classList.toggle('active');
+    links.classList.toggle('active');
+});
+
+
+function doMenu () {
+    if (menu.classList.contains(faderClass)) {
+        fadeInOut.classList.remove(faderClass);
+    } else {
+        fadeInOut.classList.add(faderClass);
+    }
+    menu.classList.toggle('active');
+    links.classList.toggle('active');
+}
+menu.addEventListener('click', function () {
+    menu.classList.toggle('active');
+    links.classList.toggle('active');
+});
+function doFade() {
+    const fadeInOut = document.querySelector("#fade");
+    const faderClass = "fadeout";
+    if (fadeInOut.classList.contains(faderClass)) {
+        fadeInOut.classList.remove(faderClass);
+    } else {
+        fadeInOut.classList.add(faderClass);
+    }
+};
