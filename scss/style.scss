@@ -96,8 +96,8 @@ header {
     display: flex;
 }
 .logo {
-    width: 80px;
-    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
     margin-right: auto;
     transition: 0.7s;
     &:hover {
@@ -198,7 +198,7 @@ header {
 }
 .info {
     display: block;
-    width: 540px;
+    max-width: 540px;
     margin-right: auto;
     text-align: center;
     //padding-left: 40px;
@@ -221,8 +221,9 @@ header {
     }
 }
 .info__text {
-    width: 500px;
-    margin: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    //margin-right: 0;
     padding: 0;
     color: #818181;
 }
@@ -295,6 +296,7 @@ header {
     display: block;
     margin: 0 auto;
     max-width: 568px;
+    min-width: 268px;
     height: 50px;
     background-color: #ffffff;
     border: 1px solid #c3c3c3;
@@ -474,8 +476,44 @@ header {
     background-color: #3498db;
 }
 
-
 .stats {
+     min-height: 310px;
+     background-color: #3498db;
+     display: flex;
+     color: #ffffff;
+ }
+ .stats__wrapper {
+     max-width: 1220px;
+     padding: 0 15px;
+     margin: auto;
+     //margin-top: -100px;
+ }
+ .stats__item {
+     width: 300px;
+ }
+ .stats__list {
+     display: flex;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .stats__list li {
+     list-style: none;
+     text-align: center;
+     transition: 0.7s;
+     border-radius: 18px;
+     &:hover {
+         box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.4);
+         //background-color: #337ab7;
+         border-radius: 18px;
+         vertical-align: middle;
+         color: #ffffff;
+         margin: 0 10px; 
+         //margin: 0 15px;
+     }
+ }
+
+/*.stats {
    // height: 310px;
     background-color: #3498db;
     display: flex;
@@ -488,7 +526,7 @@ header {
     //margin-top: -100px;
 }
 .stats__item {
-    width: 300px;
+    max-width: 300px;
 }
 .stats__list {
     display: flex;
@@ -510,7 +548,7 @@ header {
         margin: 0 10px; 
         //margin: 0 15px;
     }
-}
+}*/
     
 /*.contacts__list li:nth-child(1) {
     margin-right: auto;
@@ -935,7 +973,13 @@ header {
 }
 @media (min-width: 1200px ) {
     .form__input {
-        min-width:568px;
+        //min-width:568px;
+    }
+    .stats__wrapper {
+        width: 1220px;
+    }
+    .stats__item {
+        width: 300px
     }
     
 }
@@ -964,8 +1008,14 @@ header {
     #wrapper {
         max-width:750px;
     }
+    .info {
+        margin:  0 auto;
+    }
 }
-@media (max-width: 768px ) {
+@media (max-width: 1220px ) {
+    .logo {
+        @include adaptiv-value("width", 80, 60, 0);
+    }
     #wrapper {
         max-width:none;
     }
@@ -993,17 +1043,15 @@ header {
     .info {
         //margin: 0 auto;
         //max-width: 300px;
+        @include adaptiv-value("margin-bottom", 85, 35, 0);
     }
-    .info__text  p{
-        margin: 0 auto;
-        max-width: 290px;
-        //margin-bottom: 60px;
+    .info__title {
+        @include adaptiv-value("font-size", 35, 25, 0);
+        @include adaptiv-value("margin-bottom", 30, 20, 0);
+    }
+    .info__text {
+        //max-width: 300px;
         @include adaptiv-value("width", 500, 290, 0);
-        
-        
-    }
-    .info__text p {
-        max-width: 300px;
     }
     .forms {
         margin: 0 auto;
@@ -1011,6 +1059,26 @@ header {
     .form__input {
         //min-width: 290px;
         //max-width: calc (290px + (1220 - 290) * ((1220px - 320px) / (1220 - 320)) );
-        @include adaptiv-value("max-width", 568, 290, 2);
+        @include adaptiv-value("width", 568, 268, 0);
+        @include adaptiv-value("margin-left", 35, 5, 0);
+        @include adaptiv-value("margin-right", 35, 5, 0);
+    }
+    .stats__item {
+        @include adaptiv-value("width", 300, 120, 0);
+        @include adaptiv-value("margin-bottom", 0, 20, 0);
+
+    }
+    .stats__about {
+        @include adaptiv-value("font-size", 16, 11, 0   );
+    }
+    .stats__item_photo {
+        @include adaptiv-value("margin-bottom", 25, 5, 0);
+    }
+    .stats__numbers {
+        @include adaptiv-value("font-size", 32, 20, 0);
+        @include adaptiv-value("margin-bottom", 20, 10, 0);
+    }
+    .stats__list li {
+        @include adaptiv-value("height", 183, 173, 0);
     }
 }
