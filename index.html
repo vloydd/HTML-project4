@@ -21,11 +21,11 @@
                     <div class="headin1220">
                         <div class="headcont">
                             <img class="logo" src="img/logo_Oxit.png" title="logo" alt="logoimg">
-                            <div class="menu-toggle" id="mobile-menu">
+                            <div class="menu-toggle" id="mobile-menu" onclick="menuFunc()">
                                 <!--<span class="bar"></span>-->
-                                <span class="bar">&#9776</span>
+                                <span class="bar" onclick="menuFunc()">&#9776</span>
                             </div>
-                                    <ul class="menu">
+                                    <ul class="menu" id="menu">
                                         <li><a href="" class="menu__item">Головна</a></li>
                                         <li><a href="#sitebuilding" class="menu__item">Програма курсу</a></li>
                                         <li><a href="#review" class="menu__item">Відгуки про курс</a></li>
@@ -125,8 +125,8 @@
                                                             <div class="checkbox">
                                                                 <input type="checkbox" id="agreee" class="form__checkbox _check _req">
                                                                 <div class="labelreq">
-                                                                    <label for="agree" class="form__label"><p><span>Я погоджуюся із <a href="#">Політикою Конфіденційності </a></span></p></label>
-                                                                    <img class="label__rq" src="img/icons/required.png" title="req" alt="rqimg">
+                                                                    <label for="agree" class="form__label"><p><span>Я погоджуюся із <a href="#">Політикою Конфіденційності <img class="label__rq" src="img/icons/required.png" title="req" alt="rqimg"></a></span></p></label>
+                                                                    
                                                                 </div>
                                                                 
                                                             </div>
@@ -135,7 +135,7 @@
                                                             <input class="form__submit" type="submit" name="submit" value="Зареєструватися зараз">
                                                         </form>
                                                     </div>
-                                                </div>
+                                                </div>  
                                             </div>
                                         </div>
                                     </div>
@@ -515,7 +515,7 @@
 
                         <div class="contacts">
                             <div class="overhided"></div> <!--Щоб хедер не перекривав контент при переходу по силці-->
-                            <div class="contacts__container">
+                            <div class="contacts__wrapper">
                                 <ul class="contacts__list">
                                     <li>
                                         <div class="contacts__item">
@@ -535,7 +535,7 @@
                                         <div class="contacts__item">
                                             <img class="contacts__item_photo" src="img/icons/footer/location.png" title="loclogo" alt="locationimg">
                                             <p>Адреса</p>
-                                            <a href="#maps">вул. Боженка 34г, м.Луцьк</a>
+                                            <a href="#maps">вул. Боженка 34г,Луцьк</a>
                                         </div>
                                     </li>
                                     <li>
