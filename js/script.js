@@ -1,17 +1,11 @@
 //Validation of our feedback form;
 const form = document.getElementById('form');
 form.addEventListener('submit', formSend);
-//func for options for sending a form;
 async function formSend(e) {
     let error = formValidate(form);
-    //Для виведення кстi помилок у формi, взаємодія з класом error;
-    //document.getElementById("error").innerHTML = error;
-
-    //if we have errors, we don't move;
     if (error > 0) {
         e.preventDefault();
     }
-    //if we haven't eroors, we keep going;
     if (error === 0) {
         return true;
     }
@@ -19,7 +13,6 @@ async function formSend(e) {
 
 }
 
-//looking for errors in our form and return its amount;
 function formValidate(form) {
     let error = 0;
     let freq = document.querySelectorAll('._req');
@@ -75,11 +68,7 @@ function formValidate(form) {
                 error++;
                 input.value = 'Поле необхідно заповнити';
             }
-        }/*if (document.querySelector('#agree:checked') !== null) {
-            formAddError(input);
-            error++;
-        }*/
-        
+        }
     }
     return error;
 }
@@ -110,74 +99,6 @@ function telTest(input) {
 }
 
 
-const slider= document.querySelector('.siteb-slider');
-/*let mySwiper;
-
-function mobile() {
-    if (window.innerWidth < 850) {
-        mySwiper =  new Swiper(slider,  {
-            slidersPerView: 2,
-            spaceBetween: 50,
-            loop: true,
-            slideClass: 'siteb-slider__slide',
-        });  
-    }
-    if (window.innerWidth >= 850) {
-        mySwiper.destroy();
-    }
-}
-mobile();
-window.addEventListener('resize', () => {
-    mobile();   
-});*/
-
-
-//REQUIred;
-/*let mySwiper;
-
-function mobileSlider() {
-	if (window.innerWidth <= 800 && slider.dataset.mobile == 'false') {
-		mySwiper = new Swiper(slider, {
-			slidesPerView: 2,
-			spaceBetween: 20,
-			loop: true,
-			slideClass: 'siteb-slider__slide',
-			// pagination: {
-			// 	el: '.swiper-pagination',
-			// 	clickable: true,
-			// },
-		});
-
-		slider.dataset.mobile = 'true';
-	}
-
-	if (window.innerWidth > 800) {
-		slider.dataset.mobile = 'false';
-		if (slider.classList.contains('swiper-container-initialized')) {
-			mySwiper.destroy();
-		}
-	}
-}
-
-mobileSlider()
-
-window.addEventListener('resize', () => {
-	mobileSlider();
-});*/
-
-new Swiper('.siteb-slider', {
-    slidesPerView: 3,
-    //width: 1220,
-    loop: true,
-    initalSlide: 1,
-    slideToClickedSlide: true,
-    keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-        pageUpDown: true,
-    },
-});
-
 
 
 
@@ -185,6 +106,7 @@ new Swiper('.siteb-slider', {
 new Swiper('.review__slider', {
     loop: true,
     slidesPerView: 1,
+    //autoHeight: true,
 
     
     scrollbar: {
@@ -201,35 +123,6 @@ new Swiper('.review__slider', {
     },
     
         effect: 'slide',
-    //spaceBetween: 50,
-    //initialSlide: 0,
-    //init: false,    
-    //width: 1220,
-    /*breakpoints: {
-        851: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-            init: false,
-            grabCursor: false,
-            touchRatio: 0, 
-            loop: false,  
-        },
-        601: {
-            loop: false,
-            slidesPerView: 2,
-            grabCursor: true,
-            spaceBetween: 10,
-            touchRatio: 2,
-
-        },
-        0: {
-            loop: false,
-            slidesPerView: 1,
-            grabCursor: true,
-            touchRatio: 3,
-        }
-    },*/
-
 
     pagination: {
         el: '.swiper-pagination',
@@ -238,31 +131,6 @@ new Swiper('.review__slider', {
     slideToClickedSlide: true,
     centeredSlides: true,
     paginationClickable: true,
-
-    //a11y: true,
-    //keyboardControl: true,
-        // pagination: '.swiper-pagination',
-    //paginationClickable: true,
-        /*mousewheel: {
-        sensitivity: 5,
-        eventntsTarget: ".image-slider",
-    },*/
-
-
-    /*grabCursor: true,
-
-    touchRatio: 1,
-    freeMode: true,
-    pagination: false,
-    scrollContainer: false,
-    keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-        pageUpDown: true,
-    },
-    slidesPerView: 3,
-    watchOverflow: true,
-    initialSlide: 0,*/
 
     autoplay: {
         delay: 10000,
@@ -296,35 +164,6 @@ new Swiper('.mentors__slider', {
     },
     
         effect: 'slide',
-    //spaceBetween: 50,
-    //initialSlide: 0,
-    //init: false,    
-    //width: 1220,
-    /*breakpoints: {
-        851: {
-            slidesPerView: 3,
-            spaceBetween: 50,
-            init: false,
-            grabCursor: false,
-            touchRatio: 0, 
-            loop: false,  
-        },
-        601: {
-            loop: false,
-            slidesPerView: 2,
-            grabCursor: true,
-            spaceBetween: 10,
-            touchRatio: 2,
-
-        },
-        0: {
-            loop: false,
-            slidesPerView: 1,
-            grabCursor: true,
-            touchRatio: 3,
-        }
-    },*/
-
 
     pagination: {
         el: '.swiper-pagination',
@@ -333,31 +172,6 @@ new Swiper('.mentors__slider', {
     slideToClickedSlide: true,
     centeredSlides: true,
     paginationClickable: true,
-
-    //a11y: true,
-    //keyboardControl: true,
-        // pagination: '.swiper-pagination',
-    //paginationClickable: true,
-        /*mousewheel: {
-        sensitivity: 5,
-        eventntsTarget: ".image-slider",
-    },*/
-
-
-    /*grabCursor: true,
-
-    touchRatio: 1,
-    freeMode: true,
-    pagination: false,
-    scrollContainer: false,
-    keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-        pageUpDown: true,
-    },
-    slidesPerView: 3,
-    watchOverflow: true,
-    initialSlide: 0,*/
 
     autoplay: {
         delay: 10000,
@@ -371,48 +185,6 @@ new Swiper('.mentors__slider', {
     },  
 });
 
-/*menu.addEventListener('click', function () {
-    menu.classList.toggle('active');
-    links.classList.toggle('active');
-});
-
-
-function doMenu () {
-    if (menu.classList.contains(faderClass)) {
-        fadeInOut.classList.remove(faderClass);
-    } else {
-        fadeInOut.classList.add(faderClass);
-    }
-    menu.classList.toggle('active');
-    links.classList.toggle('active');
-}
-menu.addEventListener('click', function () {
-    menu.classList.toggle('active');
-    links.classList.toggle('active');
-});
-function doFade() {
-    const fadeInOut = document.querySelector("#fade");
-    const faderClass = "fadeout";
-    if (fadeInOut.classList.contains(faderClass)) {
-        fadeInOut.classList.remove(faderClass);
-    } else {
-        fadeInOut.classList.add(faderClass);
-    }
-};
-
-
-function menuFunc() {
-    var mob = document.getElementById("mobile-menu");
-    const menu = document.getElementById("menu");
-    const actives = "active";
-    if (mob.classList.contains(actives)) {
-        menu.classList.toggle(actives);
-        mob.classList.toggle(actives);
-    } else {
-        menu.classList.remove(actives);
-        mob.classList.remove(actives);
-    }
-}*/
 const menu = document.querySelector('#mobile-menu');
 const links = document.querySelector('.menu');
 menu.addEventListener('click', function () {
@@ -424,4 +196,60 @@ menu.addEventListener('click', function () {
         links.classList.add("act");
     }
 
+});
+
+
+
+const slider = document.querySelector('.siteb-container');
+
+var SameClassName = slider.getElementsByClassName("card");
+//alert (SameClassName.length);
+
+let mySwiper;
+
+function mobileSlider() {
+   /* if (SameClassName.length > 6) {
+        mySwiper = new Swiper(slider, {
+			slidesPerView: 5,
+			spaceBetween: 10,
+			initialSlide: 0,
+			loop: true,
+			slideClass: 'card',
+		});
+    }
+	else*/ if (window.innerWidth <= 850 && slider.dataset.mobile == 'false') {
+		mySwiper = new Swiper(slider, {
+			slidesPerView: 2,
+			spaceBetween: 10,
+			initialSlide: 0,
+			loop: true,
+			slideClass: 'card',
+						breakpoints: {
+				601: {
+					slidesPerView: 2,
+					spaceBetween: 65,
+				},
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 40,
+				},
+			},
+		});
+
+		slider.dataset.mobile = 'true';
+	}
+
+	if (window.innerWidth > 850) {
+		slider.dataset.mobile = 'false';
+		if (slider.classList.contains('swiper-initialized')) {
+			mySwiper.destroy();
+			//alert("destroy");
+		}
+	}
+}
+
+mobileSlider()
+
+window.addEventListener('resize', () => {
+	mobileSlider();
 });

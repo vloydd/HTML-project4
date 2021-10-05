@@ -19,9 +19,18 @@ $maxWidthContainer: 1220;
             #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
         }
     }
+    @else if $type==3 {
+        #{$property}: $startSize + px; 
+        @media (min-width: #{$maxWidthContainer + px}) {
+            #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 850px) / #{$maxWidth - 850}));
+        }
+    }
     @else {
         #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
     }
+}
+* {	
+    box-sizing: border-box;	
 }
 
 html, body {
@@ -413,7 +422,7 @@ header {
     text-align:center;
     padding: 0 15px;
     margin: 0 auto;
-    //width: 1220px;
+    max-width: 1220px;
     overflow: hidden;
     margin-top: -100px;
 }
@@ -429,12 +438,6 @@ header {
 
 .siteb-slider {
     align-items: center;
-    
-
-    //margin: 0 auto;
-
-    /*width: 100%;
-    width: 1220px;*/
 }
 .siteb-slider__wrapper {   
     //display: flex; 
@@ -446,6 +449,7 @@ header {
 .siteb-slider__slide {
     text-align:center;
     align-items: center;  
+    //max-width: 350px;
     
     //width: 100%;
     /*margin-left:50px;
@@ -691,6 +695,7 @@ header {
     content: '“';
     left: 0px;
     top: -20px;
+    overflow-y: visible;
 }
 .blockquote-8:after {
     content: '”';
@@ -1002,7 +1007,7 @@ header {
     color: #938e8e;
     text-decoration: none;
 }
-@media (min-width: 1200px ) {
+@media (min-width: 1220px ) {
     .form__input {
         min-width:568px;
     }
@@ -1033,6 +1038,9 @@ header {
     .copyrights__container {
         height: 156px;
         width: 1220px;
+    }
+    .card {
+        width: 350px;
     }
     
     
@@ -1103,11 +1111,21 @@ header {
         max-width:none;
     }
     .review__text {
-        max-width: 250px;
+        @include adaptiv-value("width", 880, 240, 0);
+        @include adaptiv-value("margin-left", 40, 25, 0);
+        @include adaptiv-value("margin-right", 40, 25, 0);
     }
     .blockquote-8 {
-        max-width: 300px;
+        @include adaptiv-value("width", 980, 290, 0);
     }
+    .blockquote-8:before,
+    .blockquote-8:after {
+        @include adaptiv-value("font-size", 100, 65, 0);
+    }
+    .blockquote-8:before {
+        @include adaptiv-value("top", -20, -10, 0);
+    }
+
     .stats__list {
         @include adaptiv-value("padding-top", 0, 20, 0);
         flex-wrap: wrap;
@@ -1165,6 +1183,12 @@ header {
     }
     .form__submit {
         @include adaptiv-value("width", 370, 277, 0);
+    }
+
+
+
+    .card {
+        @include adaptiv-value("width", 350, 190, 0);
     }
     .stats__item {
         @include adaptiv-value("width", 300, 120, 0);
@@ -1236,6 +1260,7 @@ header {
     .contacts__item {
         @include adaptiv-value("width", 300, 120, 0);
         @include adaptiv-value("margin-top", 0, 20, 0);
+        @include adaptiv-value("padding-top", 10, 0, 0);
         p {
             @include adaptiv-value("margin", 16, 5, 0);
             margin-left: 0;
@@ -1439,4 +1464,63 @@ header {
         @include adaptiv-value("font-size", 16, 13, 0);
         @include adaptiv-value("letter-spacing", 1.12, 0.3, 0);
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sitebuilding__wrapper {
+    text-align:center;
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1220px;
+    margin-top: -100px;
+}
+
+.card {
+	background-color: #c7c7c7;
+	min-width: 290px;
+	color: #111;
+	font-size: 16px;
+	text-align:center;
+    align-items: center;  
+	margin-right: 20px;
+}
+
+
+.siteb-container {
+	max-width: 1200px;
+	/*padding: 0 15px;*/
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.siteb-container .swiper-wrapper {
+}
+
+
+@media (max-width: 850px) {
+	.card {
+		width: 100%;
+		margin: 0;
+		flex-shrink: 0;
+	}
+
+	.siteb-container .swiper-wrapper {
+		justify-content: initial;
+		flex-wrap: nowrap;
+	}
 }
