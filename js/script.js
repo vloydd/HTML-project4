@@ -102,7 +102,7 @@ function telTest(input) {
 
 
 
-
+//Reviews slider
 new Swiper('.review__slider', {
     loop: true,
     slidesPerView: 1,
@@ -144,7 +144,7 @@ new Swiper('.review__slider', {
     },  
 });
 
-
+//Mentors slider
 new Swiper('.mentors__slider', {
     loop: true,
     slidesPerView: 1,
@@ -188,8 +188,6 @@ new Swiper('.mentors__slider', {
 const menu = document.querySelector('#mobile-menu');
 const links = document.querySelector('.menu');
 menu.addEventListener('click', function () {
-    //menu.classList.toggle('is-active');
-    //menu.classList.toggle('active');
     if (links.classList.contains("act")) {
         links.classList.remove("act");
     } else {
@@ -200,9 +198,12 @@ menu.addEventListener('click', function () {
 
 
 
+
+//Sitebuilding slider
 const slider = document.querySelector('.siteb-container');
 
 var SameClassName = slider.getElementsByClassName("card");
+const bulletsType = document.querySelector('.siteb__pagination');
 //alert (SameClassName.length);
 
 let mySwiper;
@@ -218,7 +219,8 @@ function mobileSlider() {
 		});
     }
 	else*/ if (window.innerWidth <= 850 && slider.dataset.mobile == 'false') {
-		mySwiper = new Swiper(slider, {
+		//bulletsType.classList.add("swiper-pagination");
+        mySwiper = new Swiper(slider, {
 			slidesPerView: 2,
 			spaceBetween: 10,
 			initialSlide: 0,
@@ -227,19 +229,26 @@ function mobileSlider() {
 						breakpoints: {
 				601: {
 					slidesPerView: 2,
-					spaceBetween: 65,
+					spaceBetween: 30,
 				},
 				0: {
 					slidesPerView: 1,
 					spaceBetween: 40,
 				},
+                
 			},
+            pagination: {
+                el: '.swiper-pagination',
+                clickable:true,
+                type: "bullets",
+            },
 		});
 
 		slider.dataset.mobile = 'true';
 	}
 
 	if (window.innerWidth > 850) {
+        //bulletsType.classList.remove("swiper-pagination");
 		slider.dataset.mobile = 'false';
 		if (slider.classList.contains('swiper-initialized')) {
 			mySwiper.destroy();
